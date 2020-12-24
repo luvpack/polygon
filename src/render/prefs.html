@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Preferences</title>
+        <link rel="stylesheet" href="prefs.css">
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+    </head>
+    <body>
+        <header>
+            <span>Preferences</span>
+        </header>
+        <div class="container">
+            <div class="item">
+                <div class="content">
+                    <a class="title">Start automatically</a>
+                    <a>Launch Polygon at system startup</a>
+                </div>
+                <div class="action" id="toggle__autostart">
+                    <label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <a class="title">Audio recording</a>
+                    <a>Enable audio recording from input device</a>
+                </div>
+                <div class="action">
+                    <label class="switch">
+                        <input disabled type="checkbox" />
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <a class="title">Keyboard shortcuts</a>
+                    <a>Enable shortcuts for quick use of features</a>
+                </div>
+                <div class="action">
+                    <label class="switch">
+                        <input disabled type="checkbox" />
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <a class="title">Debug mode</a>
+                    <a>For elite users 🚀</a>
+                </div>
+                <div class="action">
+                    <label class="switch">
+                        <input disabled type="checkbox" />
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <a class="title">Application sounds</a>
+                    <a>Toggle buttons & toggles sounds</a>
+                </div>
+                <div class="action">
+                    <label class="switch">
+                        <input disabled type="checkbox" />
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="item">
+                <div class="content">
+                    <a class="title">Save to..</a>
+                    <a id="link__save-path" class="link" href="#savedir">~/Movies/Polygon</a>
+                </div>
+                <div id="button__change-path" class="action button">Choose</div>
+            </div>
+        </div>
+        <script src="prefs.js"></script>
+    </body>
+</html>

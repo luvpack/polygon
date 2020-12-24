@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Polygon</title>
+	<link rel="stylesheet" href="index.css">
+	<meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+</head>
+
+<body>
+	<div class="recorder">
+		<a href="#fscreen" id="button__use-fs" class="recorder__button adapt">
+			<svg class="stroked" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M10.8889 2H5.55556C4.61256 2 3.70819 2.3746 3.0414 3.0414C2.3746 3.70819 2 4.61256 2 5.55556V10.8889M34 10.8889V5.55556C34 4.61256 33.6254 3.70819 32.9586 3.0414C32.2918 2.3746 31.3874 2 30.4444 2H25.1111M25.1111 34H30.4444C31.3874 34 32.2918 33.6254 32.9586 32.9586C33.6254 32.2918 34 31.3874 34 30.4444V25.1111M2 25.1111V30.4444C2 31.3874 2.3746 32.2918 3.0414 32.9586C3.70819 33.6254 4.61256 34 5.55556 34H10.8889" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>				
+		</a>
+		<a href="#selectw" id="button__select-app" class="recorder__button adapt" data-selected="false">
+			<svg class="stroked filled" viewBox="0 0 34 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M28.6416 2H5.35842C3.52143 2 2.03226 3.59188 2.03226 5.55556V30.4444C2.03226 32.4081 3.52143 34 5.35842 34H28.6416C30.4786 34 31.9677 32.4081 31.9677 30.4444V5.55556C31.9677 3.59188 30.4786 2 28.6416 2Z" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M1 5C1 3.34315 2.34315 2 4 2H30C31.6569 2 33 3.34315 33 5V9H1V5Z"/>
+			</svg>	
+		</a>
+		<a href="#record" id="button__record" class="recorder__button rec" data-record="false">
+			<svg viewBox="0 0 80 80" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path class="outline"
+					d="M40 0L68.2843 11.7157L80 40L68.2843 68.2843L40 80L11.7157 68.2843L0 40L11.7157 11.7157L40 0Z" />
+				<path class="inline"
+					d="M40 24.8L51.3137 29.4863L56 40.8L51.3137 52.1137L40 56.8L28.6863 52.1137L24 40.8L28.6863 29.4863L40 24.8Z" />
+			</svg>
+		</a>
+		<a href="#crop" id="button__crop" class="recorder__button">
+			<svg class="stroked" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M9.46182 2L9.27273 23.8182C9.27273 24.5897 9.57922 25.3297 10.1248 25.8752C10.6703 26.4208 11.4103 26.7273 12.1818 26.7273H34" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+				<path  d="M2 9.46182L23.8182 9.27273C24.5897 9.27273 25.3297 9.57922 25.8752 10.1248C26.4208 10.6703 26.7273 11.4103 26.7273 12.1818V34" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>	
+		</a>
+		<a href="#more" id="button__more" class="recorder__button">
+			<svg class="filled" viewBox="0 0 32 7" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path
+					  d="M16 6.10687C17.6864 6.10687 19.0534 4.7398 19.0534 3.05344C19.0534 1.36707 17.6864 0 16 0C14.3136 0 12.9466 1.36707 12.9466 3.05344C12.9466 4.7398 14.3136 6.10687 16 6.10687Z"/>
+				<path
+					 d="M28.9466 6.10687C30.6329 6.10687 32 4.7398 32 3.05344C32 1.36707 30.6329 0 28.9466 0C27.2602 0 25.8931 1.36707 25.8931 3.05344C25.8931 4.7398 27.2602 6.10687 28.9466 6.10687Z"/>
+				<path
+					 d="M3.05344 6.10687C4.7398 6.10687 6.10687 4.7398 6.10687 3.05344C6.10687 1.36707 4.7398 0 3.05344 0C1.36707 0 0 1.36707 0 3.05344C0 4.7398 1.36707 6.10687 3.05344 6.10687Z" />
+			</svg>
+		</a>
+		<section style="display: none;">
+			<video style="width: 1280px; height: 720px;" id="stream"></video>
+		</section>
+	</div>
+	<script src="renderer.js"></script>
+</body>
+
+</html>

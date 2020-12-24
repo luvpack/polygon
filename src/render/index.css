@@ -1,0 +1,136 @@
+body {
+	-webkit-app-region: drag;
+	font-family: -apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		Roboto,
+		Oxygen-Sans,
+		Ubuntu,
+		Cantarell,
+		'Helvetica Neue',
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji',
+		'Segoe UI Symbol';
+	text-rendering: geometricPrecision;
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-feature-settings: 'liga', 'clig', 'kern';
+	shape-rendering: geometricPrecision;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.recorder {
+	display: flex;
+	width: 100%;
+	height: -webkit-fill-available;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+a.recorder__button {
+	width: 24px;
+	height: 24px;
+	transition: .3s;
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+}
+
+a.recorder__button.adapt {
+	width: 20px;
+}
+
+a.recorder__button.rec {
+	display: block;
+	justify-content: center;
+	transition: .4s;
+	width: 54px;
+	height: 54px;
+	text-align: center;
+}
+
+a.recorder__button.rec svg{
+	transition: .4s;
+	display: block;
+	position: relative;
+	margin: auto;
+}
+
+a.recorder__button.rec svg:hover {
+	transition: .2s;
+	transform: scale(1.095, 1.095);
+}
+
+a.recorder__button.rec[data-record="true"] svg {
+	transition: .2s;
+	width: 50px;
+	height: 50px;
+	margin-top: 2px;
+}
+
+.recorder__button.rec svg:active {
+	transition: .2s;
+	transform: scale(.995, .995);
+}
+
+.recorder__button.rec[data-record="true"] svg path.inline {
+	animation: blinker 2s linear infinite;
+	transition: .4s;
+	fill: white;
+}
+
+.recorder__button.rec svg path.inline {
+	transition: .4s;
+	fill: white;
+}
+
+.recorder__button.rec svg path.outline {
+	transition: .2s;
+	fill: #FF0040;
+}
+
+
+a.recorder_button svg {
+	width: 26px;
+	height: 26px;
+}
+
+
+a.recorder__button .filled {
+	transition: .15s;
+	fill: #D1D1D1;
+}
+
+a.recorder__button .filled:hover {
+	fill: grey;
+}
+
+a.recorder__button .stroked {
+	transition: .15s;
+	stroke: #D1D1D1;
+}
+
+a.recorder__button .stroked:hover {
+	stroke: grey;
+}
+
+.recorder__unicorn a {
+	font-size: 20;
+	size: 20px;
+}
+
+a#button__select-app[data-selected="true"] svg {
+	fill: grey;
+	stroke: grey;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: .3;
+	}
+}

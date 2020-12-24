@@ -1,0 +1,172 @@
+body {
+    user-select: none;
+    overflow: hidden !important;
+    font-family: -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen-Sans,
+        Ubuntu,
+        Cantarell,
+        'Helvetica Neue',
+        sans-serif,
+        'Apple Color Emoji',
+        'Segoe UI Emoji',
+        'Segoe UI Symbol';
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: 'liga', 'clig', 'kern';
+    shape-rendering: geometricPrecision;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    -webkit-app-region: drag;
+    height: 30px;
+    width: -webkit-fill-available;
+    border-bottom-color: #E8E8E8;
+    border-bottom-width: 0.1px;
+    border-bottom-style: solid;
+    background-color: white;
+    z-index: 10;
+}
+
+header span {
+    line-height: 1.5rem;
+    font-size: 14px;
+    text-align: center;
+    width: -webkit-fill-available;
+    color: black;
+}
+
+.container {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    width: -webkit-fill-available;
+    overflow-y: auto;
+}
+
+.item {
+    padding: 1.3rem;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom-color: #E8E8E8;
+    border-bottom-width: 0.1px;
+    border-bottom-style: solid;
+}
+
+.item.top {
+    border-top-color: #E8E8E8;
+    border-top-width: 0.1px;
+    border-top-style: solid;
+}
+
+.item .content {
+    font-size: 12px;
+    flex: 8;
+    flex-direction: column;
+    display: flex;
+    width: min-content;
+    height: inherit;
+    float: left;
+}
+
+.item .content b {
+    margin-bottom: 10px;
+}
+
+.item .content a {
+    font-weight: normal;
+    outline: none;
+    text-decoration: none;
+    color: grey;
+}
+
+.item .content a.title {
+    font-weight: 600;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.item .content a.link {
+    color: #3400FE;
+}
+
+.item .action {
+    font-size: 12px;
+    float: right;
+}
+
+.item .action.button {
+    cursor: pointer;
+    font-size: 12px;
+    border: #E8E8E8 1px solid;
+    border-radius: 4px;
+    padding: 0.4rem 1.7rem 0.4rem 1.7rem;
+    transition: .2s;
+}
+
+.item .action.button:hover {
+    transition: .1s;
+    transform: scale(1.055, 1.055);
+    border-color: #cccccc;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 23px;
+  }
+  
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+input:checked + .slider {
+    border: #3400FE 1px solid;
+}
+
+input:not(:checked):hover + .slider {
+    border: #cccccc 1px solid;
+}
+
+input:checked + .slider:before {
+    background-color: #3400FE;
+    transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 4px;
+    bottom: 0;
+    border: #E8E8E8 1px solid;
+    transition: .2s;
+    border-radius: 666rem;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 3px;
+    background-color: #E8E8E8;
+    transition: .2s;
+    border-radius: 666rem;
+}
+
