@@ -89,7 +89,7 @@ Recorder.prototype.start = async function () {
 
 Recorder.prototype.stop = function () {
 	this._recorder.addEventListener('stop', () => {
-		this.saveAs(this.blobs[this.blobs.length - 1], `Polygon ${moment().format('dddd, MMMM Do YYYY, h:mm:ss a')}`);
+		this.saveAs(this.blobs[this.blobs.length - 1], `Polygon ${moment().format('dddd, MMMM Do YYYY, h_mm_ss a')}`);
 	});
 
 	this._recorder.stop();

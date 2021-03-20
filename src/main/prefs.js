@@ -24,7 +24,10 @@ const openPrefsWindow = async options => {
 		frame: true,
 		backgroundColor: '#fff',
 		webPreferences: {
-			nodeIntegration: true
+			nodeIntegration: true,
+			contextIsolation: false,
+			enableRemoteModule: false,
+			webSecurity: true
 		}
 	});
 
@@ -41,6 +44,9 @@ const openPrefsWindow = async options => {
 
 	// Await promisify(ipc.answerRenderer)('preferences-ready');
 
+	prefsWindow.webContents.openDevTools({
+		mode: 'detach'
+	})
 	prefsWindow.show();
 	return prefsWindow;
 };

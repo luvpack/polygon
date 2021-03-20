@@ -32,14 +32,16 @@ $(document).on('DOMContentLoaded', async () => {
 	buttons.selectApp.on('click', async event => {
 		if (event.currentTarget.dataset.selected === 'false') {
 			const sources = await recorder.getSources('window');
-			require('./ipc').appsMenuGet(sources);
+			await require('./ipc').appsMenuGet(sources);
 		} else {
 			event.currentTarget.dataset.selected = 'false';
 			recorder.type = 'screen';
 		}
 	});
 
-	buttons.more.on('click', () => require('./ipc').moreMenuGet());
+	buttons.more.on('click', async () => {
+		await require('./ipc').moreMenuGet()
+	});
 });
 
 module.exports = {recorder};

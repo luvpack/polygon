@@ -36,7 +36,7 @@ const createMainWindow = async () => {
 		title: app.name,
 		show: false,
 		width: 400,
-		height: 70,
+		height: 80,
 		resizable: false,
 		frame: false,
 		zoomToPageWidth: false,
@@ -53,6 +53,10 @@ const createMainWindow = async () => {
 	// TsWin.setBackgroundColor('rgba(67, 67, 67, 0.51)')
 
 	win.on('ready-to-show', () => {
+		win.webContents.openDevTools({
+			mode: 'detach'
+		})
+
 		setAppMenu();
 		win.show();
 		// TsWin.show()

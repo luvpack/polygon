@@ -1,18 +1,21 @@
 const {ipcRenderer} = require('electron');
 
 const getSavePath = () => {
+	console.log('getSavePath')
 	return ipcRenderer.invoke('get-save-path').then(value => {
 		return value;
 	});
 };
 
-const openSavePath = () => {
-	ipcRenderer.invoke('open-save-path');
+const openSavePath = async () => {
+	await ipcRenderer.invoke('open-save-path')
+		.then(() => console.log('open'))
 };
 
 const changeSavePath = () => {
 	ipcRenderer.invoke('change-save-path').then(res => {
 		if (res) {
+			console.log(res)
 			linkPath.textContent = res;
 		}
 	});

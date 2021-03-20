@@ -34,7 +34,7 @@ const getSavePathHandler = () => ipcMain.handle('get-save-path', () => savePath)
 
 const openSavePathHandler = () => ipcMain.handle('open-save-path', () => shell.openPath(savePath));
 
-const changeSavePathHandler = async () => {
+const changeSavePathHandler = () => {
 	return ipcMain.handle('change-save-path', () => {
 		return dialog.showOpenDialog({
 			title: 'Select Polygon folder',

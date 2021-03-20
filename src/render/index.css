@@ -1,5 +1,4 @@
 body {
-	-webkit-app-region: drag;
 	font-family: -apple-system,
 		BlinkMacSystemFont,
 		'Segoe UI',
@@ -18,10 +17,31 @@ body {
 	shape-rendering: geometricPrecision;
 	margin: 0;
 	padding: 0;
+	height: 100vh;
 }
 
 a {
 	text-decoration: none;
+}
+
+.actions {
+	padding: 0 20px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.drag-zone.vertical {
+	height: 10px;
+	width: 100% !important;
+}
+
+.drag-zone {
+	display: block;
+	z-index: 1;
+	width: 20px;
+	-webkit-app-region: drag;
 }
 
 .recorder {
@@ -37,8 +57,8 @@ a.recorder__button {
 	width: 24px;
 	height: 24px;
 	transition: .3s;
-	margin-left: 1.5rem;
-	margin-right: 1.5rem;
+
+	z-index: 10000000000;
 }
 
 a.recorder__button.adapt {

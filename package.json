@@ -13,7 +13,7 @@
 		"postinstall": "electron-builder install-app-deps",
 		"lint": "xo",
 		"test": "npm run lint",
-		"start": "electron ./src/main",
+		"start": "electromon ./src/main",
 		"pack": "electron-builder --dir",
 		"dist": "electron-builder --macos",
 		"release": "np"

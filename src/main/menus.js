@@ -108,7 +108,7 @@ const aboutItem = {
 const preferencesItem = {
 	label: 'Preferences…',
 	accelerator: 'Command+,',
-	click: () => openPrefsWindow()
+	click: async () => await openPrefsWindow()
 };
 
 const moreMenuTemplate = () => [
